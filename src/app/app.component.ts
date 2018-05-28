@@ -8,12 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hello World';
 
-  items = [
-    { show: true, name: "Item 1", type: "text" },
-    { show: true, name: "Item 2", type: "checkbox" },
-    { show: false, name: "Item 3", type: "text" }];
-    
-  update(){
-    this.title = "Angular In 5 Minutes";
-  }
+  person = { 
+    name: "John Doe", 
+    dob: new Date(1990, 5, 10), 
+    position: 'Software Developer', 
+    salary: 80000 };
 }
