@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
+import { WeeklyNetSalaryPipe } from './weekly-net-salary.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    WeeklyNetSalaryPipe
   ],
   imports: [
     BrowserModule,
