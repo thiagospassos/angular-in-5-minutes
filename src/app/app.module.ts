@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { WeeklyNetSalaryPipe } from './weekly-net-salary.pipe';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
-    WeeklyNetSalaryPipe
+    WeeklyNetSalaryPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
