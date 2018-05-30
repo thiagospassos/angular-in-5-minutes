@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { WeeklyNetSalaryPipe } from './weekly-net-salary.pipe';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
     WeeklyNetSalaryPipe,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
