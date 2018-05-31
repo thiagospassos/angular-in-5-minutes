@@ -8,6 +8,7 @@ import { ChildComponent } from './child/child.component';
 import { WeeklyNetSalaryPipe } from './weekly-net-salary.pipe';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { MathExtensionsService } from './math-extensions.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ContactComponent } from './contact/contact.component';
 
     ])
   ],
-  providers: [],
+  providers: [MathExtensionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
