@@ -9,6 +9,7 @@ import { WeeklyNetSalaryPipe } from './weekly-net-salary.pipe';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { MathExtensionsService } from './math-extensions.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MathExtensionsService } from './math-extensions.service';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'contact', component: ContactComponent }
