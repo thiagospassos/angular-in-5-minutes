@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MathExtensionsService } from '../math-extensions.service';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +7,10 @@ import { MathExtensionsService } from '../math-extensions.service';
 })
 export class HomeComponent implements OnInit {
 
-  a: number;
-  b: number;
-  c: number;
+  constructor() { }
 
-  result: number;
 
-  constructor(private mathExtensions: MathExtensionsService) { }
 
   ngOnInit() {
   }
-
-  getResult() {
-    this.result = this.mathExtensions.bhaskarasFormula(this.a, this.b, this.c);
-  }
-
-
 }
