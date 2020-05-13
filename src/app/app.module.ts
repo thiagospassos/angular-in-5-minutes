@@ -8,9 +8,7 @@ import { ChildComponent } from './child/child.component';
 import { WeeklyNetSalaryPipe } from './weekly-net-salary.pipe';
 import { HomeComponent } from './home/home.component';
 import { MathExtensionsService } from './math-extensions.service';
-import { HttpClientModule } from '@angular/common/http'
-import { ContactUsModule } from './contact-us/contact-us.module';
-import { ContactComponent } from './contact-us/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,14 +21,18 @@ import { ContactComponent } from './contact-us/contact/contact.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ContactUsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'contact', component: ContactComponent }
-
-    ])
+      {
+        path: 'contact',
+        loadChildren: () =>
+          import('./contact-us/contact-us.module').then(
+            (m) => m.ContactUsModule
+          ),
+      },
+    ]),
   ],
   providers: [MathExtensionsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
